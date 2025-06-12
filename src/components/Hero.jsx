@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import "../styles/AnimatedBorder.css";
+import heroImage from "../assets/programmer.png";
 
 const Hero = () => {
   const scrollToNext = () => {
@@ -132,7 +133,7 @@ const Hero = () => {
           <div className="relative w-48 h-48 md:w-80 md:h-80 flex items-center justify-center">
             <div className="absolute w-full h-full rounded-full border-4 border-dotted border-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 animate-dash"></div>
             <img
-              src="./src/assets/programmer.png"
+              src={heroImage}
               alt="Hero"
               className="w-full h-full object-cover rounded-full"
             />
