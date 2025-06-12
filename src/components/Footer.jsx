@@ -55,6 +55,7 @@ const Footer = () => {
                 whileTap={{ scale: 0.9 }}
                 className="text-gray-400 hover:text-white transition-colors duration-300"
                 aria-label={link.label}
+                target="_blank"
               >
                 <link.icon size={24} />
               </motion.a>
