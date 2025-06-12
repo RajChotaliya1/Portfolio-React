@@ -30,6 +30,13 @@ const Navigation = () => {
     // setIsOpen(false);
   };
 
+  const scrollToHome = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -41,8 +48,9 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.div
+            onClick={scrollToHome}
             whileHover={{ scale: 1.1 }}
-            className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+            className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent cursor-pointer"
           >
             .Portfolio
           </motion.div>

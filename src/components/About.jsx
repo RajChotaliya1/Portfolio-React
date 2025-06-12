@@ -133,7 +133,7 @@ const About = () => {
                 className="flex flex-wrap gap-3 mt-6"
                 variants={itemVariants}
               >
-                {["HTML5", "CSS3", "JavaScript", "React", "Next.js", "UI/UX"].map(
+                {["HTML5", "CSS3", "JavaScript", "React", "Next.js"].map(
                   (tech) => (
                     <motion.span
                       key={tech}

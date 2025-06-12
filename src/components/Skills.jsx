@@ -12,10 +12,10 @@ const Skills = () => {
     { name: "Next.js", level: 60, color: "from-yellow-500 to-orange-500" },
     {
       name: "Redux Toolkit",
-      level: 75,
+      level: 60,
       color: "from-indigo-500 to-purple-500",
     },
-    { name: "MUI", level: 70, color: "from-orange-500 to-red-500" },
+    { name: "MUI", level: 60, color: "from-orange-500 to-red-500" },
     {
       name: "Responsive Design",
       level: 85,

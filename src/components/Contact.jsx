@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -15,14 +16,20 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate form submission
+
+    const form = e.target;
+    form.submit();
+
+    setIsSubmitted(true);
+    toast.success("Message sent successfully!", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+
     setTimeout(() => {
-      setIsSubmitted(true);
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({ name: "", email: "", subject: "", message: "" });
-      }, 3000);
-    }, 1000);
+      setIsSubmitted(false);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    }, 3000);
   };
 
   const handleChange = (e) => {
@@ -77,6 +84,7 @@ const Contact = () => {
       id="contact"
       className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900/30"
     >
+      <Toaster />
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -136,9 +144,6 @@ const Contact = () => {
                   Available for freelance work
                 </h4>
                 <p className="text-gray-300 leading-relaxed">
-                  {/* I'm currently available for freelance projects and
-                  collaboration. Whether you need a complete web application, or
-                  just want to bring your ideas to life, I'd love to help. */}
                   I'm Open to freelance and collaborative projects — I help
                   build responsive web apps and improve user experiences with
                   clean, scalable front-end development.
@@ -147,8 +152,15 @@ const Contact = () => {
             </motion.div>
 
             {/* Contact Form */}
+            <iframe name="form-target" style={{ display: "none" }}></iframe>
             <motion.div variants={itemVariants}>
-              <form onSubmit={handleSubmit} className="space-y-6 mt-0 md:mt-16">
+              <form
+                onSubmit={handleSubmit}
+                action={import.meta.env.VITE_FORMSPREE_ENDPOINT}
+                method="POST"
+                target="form-target"
+                className="space-y-6 mt-0 md:mt-16"
+              >
                 <div className="grid md:grid-cols-2 gap-6">
                   <motion.div whileFocus={{ scale: 1.02 }} className="relative">
                     <input

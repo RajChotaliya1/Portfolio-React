@@ -5,9 +5,16 @@ import "../styles/AnimatedBorder.css";
 
 const Hero = () => {
   const scrollToNext = () => {
-    const aboutSection = document.querySelector("#projects");
+    const aboutSection = document.querySelector("#about ,#projects");
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToNextForProject = () => {
+    const projectSection = document.querySelector("#projects");
+    if (projectSection) {
+      projectSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -70,7 +77,7 @@ const Hero = () => {
                 boxShadow: "0 20px 40px rgba(59, 130, 246, 0.3)",
               }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToNext()}
+              onClick={scrollToNextForProject}
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
               View My Work
