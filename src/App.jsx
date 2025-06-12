@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -21,7 +20,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
-       <ScrollToTop />
+      <ScrollToTop />
     </div>
   );
 }
