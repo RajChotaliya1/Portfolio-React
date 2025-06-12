@@ -53,6 +53,7 @@ const Footer = () => {
                 href={link.href}
                 whileHover={{ scale: 1.2, y: -5 }}
                 whileTap={{ scale: 0.9 }}
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors duration-300"
                 aria-label={link.label}
               >
@@ -68,16 +69,6 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-8 pt-8 border-t border-white/10 text-center"
         >
-          {/* <div className="flex items-center justify-center space-x-2 text-gray-400">
-            <span>Made with</span>
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <Heart size={16} className="text-red-500 fill-current" />
-            </motion.div>
-            <span>using React & Framer Motion</span>
-          </div> */}
           <p className="text-gray-500 text-sm">
             © {new Date().getFullYear()} Raj Chotaliya. All rights reserved.
           </p>
