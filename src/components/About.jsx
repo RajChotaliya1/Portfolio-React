@@ -100,9 +100,10 @@ const About = () => {
               <p className="text-gray-300 text-lg leading-relaxed">
                 Hi, I'm Raj Chotaliya, a passionate front-end developer from
                 Rajkot, Gujarat. I have successfully completed a Web Development
-                course at CodeSoft and gained hands-on experience as a front-end
-                development intern at
-                <i>
+                course at CodeSoft
+                {/* and gained hands-on experience as
+                a front-end development intern at */}
+                {/* <i>
                   <b>
                     <u>
                       <a
@@ -114,11 +115,14 @@ const About = () => {
                       </a>
                     </u>
                   </b>
-                </i>
+                </i> */}
                 . I have also completed my Bachelor's degree in B.TECH Computer
                 Engineering from Atmiya University.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
+                {/* I love tackling complex problems and turning creative ideas into reality. When I'm not
+                coding, you can find me exploring new technologies, contributing to open-source projects,
+                or enjoying a good cup of coffee while sketching new design concepts. */}
                 I specialize in creating responsive, user-friendly, and dynamic
                 web applications using the latest HTML, CSS, JavaScript, and
                 React technologies. My focus is on enhancing UI/UX design,
