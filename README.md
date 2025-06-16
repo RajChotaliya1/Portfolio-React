@@ -4,7 +4,7 @@ A modern and responsive personal portfolio built using *React, **Vite, **Tailwin
 
 ## 📸 Live Demo
 
-[View Live Site](https://rajchotaliya-portfolio.netlify.app/)
+[View Live Site](https://rajchotaliya.dev/)
 
 ## 🛠 Tech Stack
 
